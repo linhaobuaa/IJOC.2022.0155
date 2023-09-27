@@ -88,5 +88,5 @@ This code is being developed on an on-going basis at the author's
 
 ## Support
 
-For support in using this software, submit an
+For support in using this software, please submit an
 [issue](https://github.com/linhaobuaa/IJOC.2022.0155/issues/new).
