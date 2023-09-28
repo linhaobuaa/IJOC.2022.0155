@@ -55,8 +55,8 @@ python run_empirical_data_set.py
 ```
 The script is to conduct 10 independent runs to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. It is expected to be completed in roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
 ```
-Number of runs:  10 , Mean of AUROC:  0.9509500000000001 , STD of AUROC:  0.01018422800216098
-Number of runs:  10 , Mean of AUPRC:  0.31303 , STD of AUPRC:  0.07672194014752233
+Number of runs:  10 , Mean of AUROC:  0.9509500000000001 , Standard deviations of AUROC:  0.01018422800216098
+Number of runs:  10 , Mean of AUPRC:  0.31303 , Standard deviations of AUPRC:  0.07672194014752233
 ```
 Note: the results may show some stochasticity due to the random parameter initialization process of neural networks.
 
