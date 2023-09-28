@@ -48,10 +48,15 @@ To run the code, you will need to make sure that you have the following dependen
 
 1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
 
-2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server; the results may show randomness due to the random parameter initialization process of neural networks; the output of the script can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt)).
+2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands:
 ```
 cd scripts
 python run_empirical_data_set.py
+```
+Note: the script is to conduct 10 independent runs to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. It is expected to be completed in roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server. The results may show randomness due to the random parameter initialization process of neural networks. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
+```
+Number of runs:  10 , Mean of AUROC:  0.9509500000000001 , STD of AUROC:  0.01018422800216098
+Number of runs:  10 , Mean of AUPRC:  0.31303 , STD of AUPRC:  0.07672194014752233
 ```
 
 ## Results
