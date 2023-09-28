@@ -60,9 +60,25 @@ Number of runs:  10 , Mean of AUPRC:  0.31303 , Standard deviations of AUPRC:  0
 ```
 Note: the results may show some stochasticity due to the random parameter initialization process of neural networks.
 
+3. To replicate the results of our proposed model in [Figure 4](results/figure4.png) of the paper, please do the following commands:
+```
+cd scripts
+python run_synthetic_data_set_1.py
+```
+
+4. To replicate the results of our proposed model in [Table A10](results/tableA10.png) of the online supplemental materials, please do the following commands:
+```
+cd scripts
+python run_synthetic_data_set_2.py
+```
+
 ## Results
 
 ![image](results/table1.png)
+
+![image](results/figure4.png)
+
+![image](results/tableA10.png)
 
 ## Acknowledgement
 
