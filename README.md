@@ -54,6 +54,10 @@ cd scripts
 python run_empirical_data_set.py
 ```
 
+## Results
+
+![image](results/table1.png)
+
 ## Acknowledgement
 
 We would like to thank the editors and anonymous reviewers for their detailed and constructive feedbacks in helping improve the paper.
