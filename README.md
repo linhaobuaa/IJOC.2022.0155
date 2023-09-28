@@ -48,7 +48,7 @@ To run the code, you will need to make sure that you have the following dependen
 
 1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
 
-2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note 1: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server; note 2: the results may show randomness in).
+2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server; the results may show randomness due to the random parameter initialization process of neural networks; the output of the script can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt)).
 ```
 cd scripts
 python run_empirical_data_set.py
