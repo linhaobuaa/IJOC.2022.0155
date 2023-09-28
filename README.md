@@ -44,39 +44,16 @@ To run the code, you will need to make sure that you have the following dependen
 
 * `Python` 3.6 with `pytorch` 1.4.0, `numpy`, `scikit-learn`, `matplotlib`
 
-## Results
-
-empirical data set cost about 8 GB memory
-
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
-
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
 
+To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server).
 ```
-make mult-test
+cd scripts
 ```
-or
 ```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
+python run_empirical_data_set.py
 ```
 
 ## Acknowledgement
