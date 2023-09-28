@@ -1,6 +1,7 @@
 #####################################################################################
-# Script for reproducing the performance of our proposed model on the empirical data 
-# set, which is shown in Table 1 of the paper. 
+# Script for reproducing the performance of our proposed model on the synthetic data 
+# set with product diversion to unauthorized merchants, which is shown in Table A10 
+# of the online supplemental materials. 
 #####################################################################################
 
 import re
@@ -11,27 +12,29 @@ import numpy as np
 trim_coefficient = 0.9
 lr = 0.01
 num_epochs = 500
-gmm_k = 6
-latent_dim = 20
-latent_categories = 10
+gmm_k = 2
+latent_dim = 5
+latent_categories = 5
 lambda_seq_proximity = 1e-7
 lambda_energy = 1e-3
 lambda_cov_diag = 1e-7
 lambda_disc = 1e-1
 use_cuda = True
 use_different_lr = False
-input_data_path = "../data/dataset_hp/hp_sequence_input.npz"
-index_id_label_path = "../data/dataset_hp/partner_index_id_label_traintest.txt"
-input_sequence_dist_path = "../data/dataset_hp/sequence_pearson_correlation.txt"
-result_filepath = "../results/result_dataset_hp.txt"
 
 os.chdir("../src/")
 
 print ("Start running")
+input_data_path = "../data/dataset_synthetic_2/hp_sim_sequence_input.npz"
+index_id_label_path = "../data/dataset_synthetic_2/partner_index_id_label_traintest.txt"
+input_sequence_dist_path = "../data/dataset_synthetic_2/hp_sim_sequence_pearson_correlation.txt"
+result_filepath = "../results/result_dataset_synthetic_2.txt"
+
 try:
     os.remove(result_filepath)
 except:
     pass
+
 for i in range(0, 10):
     command = "python main.py --trim_coefficient %.8f --lr %.8f --num_epochs %d --gmm_k %d --latent_dim %d \
         --latent_categories %d --lambda_seq_proximity %.8f --lambda_energy %.8f --lambda_cov_diag %.8f --lambda_disc %.8f \

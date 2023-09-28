@@ -131,4 +131,5 @@ dmypy.json
 
 .DS_Store
 data/dataset_hp/*
-data/dataset_synthetic/*
+data/dataset_synthetic_1/*
+data/dataset_synthetic_2/*
