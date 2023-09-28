@@ -27,7 +27,6 @@ result_filepath = "../results/result_dataset_hp.txt"
 
 os.chdir("../src/")
 
-"""
 print ("Start running")
 try:
     os.remove(result_filepath)
@@ -42,7 +41,6 @@ for i in range(0, 10):
         "--input_sequence_dist_path", input_sequence_dist_path, ">>", result_filepath], shell=True, stdout=subprocess.PIPE)
     print (c.stdout.decode('ascii'))
 print ("Finish running")
-"""
 
 print ("Start computing average performance over multiple runs")
 auroc_list = []
