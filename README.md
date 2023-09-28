@@ -42,9 +42,11 @@ The goal of this software is to facilitate readers to reproduce the experimental
 
 To run the code, you will need to make sure that you have the following dependencies installed:
 
-* `Python` 3.6 with `pytorch` 1.4.0, `numpy`, `scikit-learn`
+* `Python` 3.6 with `pytorch` 1.4.0, `numpy`, `scikit-learn`, `matplotlib`
 
 ## Results
+
+empirical data set cost about 8 GB memory
 
 Figure 1 in the paper shows the results of the multiplication test with different
 values of K using `gcc` 7.5 on an Ubuntu Linux box.
