@@ -46,9 +46,9 @@ To run the code, you will need to make sure that you have the following dependen
 
 ## Replicating
 
-Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
+1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
 
-To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server).
+2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands (note: the experiment is expected to be completed within roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server).
 ```
 cd scripts
 python run_empirical_data_set.py
