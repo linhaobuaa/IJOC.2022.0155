@@ -133,3 +133,4 @@ dmypy.json
 data/dataset_hp/*
 data/dataset_synthetic_1/*
 data/dataset_synthetic_2/*
+data/dataset_synthetic_1.zip
