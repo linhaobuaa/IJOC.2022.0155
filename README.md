@@ -20,7 +20,7 @@ https://doi.org/10.1287/ijoc.2022.0155.cd
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{lin2023deterring,
+@article{lin2023deterringcode,
   author =        {Lin, Hao and Liu, Guannan and Wu, Junjie and Zhao, J. Leon},
   publisher =     {INFORMS Journal on Computing},
   title =         {Deterring the Gray Market: Product Diversion Detection via Learning Disentangled Representations of Multivariate Time Series},
