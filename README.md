@@ -46,17 +46,17 @@ To run the code, you will need to make sure that you have the following dependen
 
 ## Replicating
 
-1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md).
+1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md). Then, we recommend to use GPUs to run the codes in the `scripts` folder, and we detail the instructions as follows.
 
 2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands:
 ```
 cd scripts
 python run_empirical_data_set.py
 ```
-The script is to conduct 10 independent runs to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. It is expected to be completed in roughly one hour with a maximum cost of 8 GB memory if ran with CPUs on a Linux Server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
+The script is to conduct 10 independent runs on the empirical data set to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. The experiment is expected to be completed in less than one hour with a maximum cost of 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
 ```
-Number of runs:  10 , Mean of AUROC:  0.9509500000000001 , Standard deviations of AUROC:  0.01018422800216098
-Number of runs:  10 , Mean of AUPRC:  0.31303 , Standard deviations of AUPRC:  0.07672194014752233
+Number of runs:  10 , Mean of AUROC:  0.9410000000000001 , Standard deviations of AUROC:  0.0222885620891075
+Number of runs:  10 , Mean of AUPRC:  0.32327999999999996 , Standard deviations of AUPRC:  0.11616950374345239
 ```
 Note: the results may show some stochasticity due to the random parameter initialization process of neural networks.
 
@@ -65,12 +65,19 @@ Note: the results may show some stochasticity due to the random parameter initia
 cd scripts
 python run_synthetic_data_set_1.py
 ```
+The script is to run our proposed model on 12 synthetic data sets with different levels of training or testing anomalies.
 
 4. To replicate the results of our proposed model in [Table A10](results/tableA10.png) of the online supplemental materials, please do the following commands:
 ```
 cd scripts
 python run_synthetic_data_set_2.py
 ```
+The script is to run our proposed model on a synthetic data set which contains simulations of product diversion to unauthorized merchants. The experiment is expected to be completed in roughly one hour with a maximum cost of less than 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_synthetic_2.txt](results/result_dataset_synthetic_2.txt).
+```
+Number of runs:  10 , Mean of AUROC:  0.98392 , Standard deviations of AUROC:  0.013270704578129976
+Number of runs:  10 , Mean of AUPRC:  0.83457 , Standard deviations of AUPRC:  0.0948944155364266
+```
+Note: the results may show some stochasticity due to the random parameter initialization process of neural networks.
 
 ## Results
 
