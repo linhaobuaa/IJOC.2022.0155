@@ -21,7 +21,7 @@ Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
 @article{lin2023deterring,
-  author =        {Lin, Hao and Liu, Guannan and Wu, Junjie and Zhao, J Leon},
+  author =        {Lin, Hao and Liu, Guannan and Wu, Junjie and Zhao, J. Leon},
   publisher =     {INFORMS Journal on Computing},
   title =         {Deterring the Gray Market: Product Diversion Detection via Learning Disentangled Representations of Multivariate Time Series},
   year =          {2023},
