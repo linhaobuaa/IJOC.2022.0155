@@ -21,3 +21,4 @@
 0,3,-0.25453469060801115
 0,4,-0.18237303234178187
 ```
+* A file with the name `hp_sequence_input.npz` for the empirical data or the name `hp_sim_sequence_input.npz` for the synthetic data: this file includes the normalized TSOQs that are input to the model and could be read with the script [data/read_npz_file.py](data/read_npz_file.py).
