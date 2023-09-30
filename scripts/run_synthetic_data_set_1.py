@@ -49,22 +49,15 @@ for status in ["test", "train"]:
 print ("Finish running")
 
 print ("Start computing average performance over multiple runs")
-for status in ["test", "train"]:
+for status in ["train", "test"]:
     for percent in [1, 5, 10, 15, 20, 25]:
-        print ("%s %d " (status, percent))
+        result_filepath = "../results/result_dataset_synthetic_1_%s_%dpercent.txt" % (status, percent)
+        # print ("="*50)
         auroc_list = []
-        auprc_list = []
         with open(result_filepath) as f:
             for line in f:
                 linestr = line.strip()
                 if "AUROC : " in linestr:
                     auroc_list.append(float(re.search(r'AUROC : (.*?),', linestr).group(1)))
-                if "AUPRC : " in linestr:
-                    # print (linestr.split('AUPRC : ')[1])
-                    auprc_list.append(float(linestr.split('AUPRC : ')[1]))
-        print('-'*50)
-        auroc_list = auroc_list
-        print ("Number of runs: ", len(auroc_list), ", Mean of AUROC: ", np.mean(auroc_list), ", Standard deviations of AUROC: ", np.std(auroc_list))
-        auprc_list = auprc_list
-        print ("Number of runs: ", len(auprc_list), ", Mean of AUPRC: ", np.mean(auprc_list), ", Standard deviations of AUPRC: ", np.std(auprc_list))
+        print ("Anomaly proportion in %sing: %d percent; Mean AUROC in %s runs: %s" % (status, percent, len(auroc_list), np.mean(auroc_list)))
 print ("Finish computing average performance over multiple runs")

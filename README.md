@@ -53,7 +53,7 @@ To run the code, you will need to make sure that you have the following dependen
 cd scripts
 python run_empirical_data_set.py
 ```
-The script is to conduct 10 independent runs on the empirical data set to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. The experiment is expected to be completed in less than one hour with a maximum cost of 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
+The script is to conduct 10 independent runs on the empirical data set to obtain the average AUROC with standard deviations and the average AUPRC with standard deviations. The experiment is expected to be completed in less than one hour with a maximum cost of 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results in the console and will also generate a log file that can be found in [results/result_dataset_hp.txt](results/result_dataset_hp.txt).
 ```
 Number of runs:  10 , Mean of AUROC:  0.9410000000000001 , Standard deviations of AUROC:  0.0222885620891075
 Number of runs:  10 , Mean of AUPRC:  0.32327999999999996 , Standard deviations of AUPRC:  0.11616950374345239
@@ -65,14 +65,28 @@ Note: the results may show some stochasticity due to the random parameter initia
 cd scripts
 python run_synthetic_data_set_1.py
 ```
-The script is to run our proposed model on 12 synthetic data sets with different levels of training or testing anomalies.
+The script is to run our proposed model on 12 synthetic data sets with different levels of training or testing anomalies. The experiment is expected to be completed in roughly 20 hours with a maximum cost of less than 5 GB memory if ran with GPUs on a Linux server. The script will output the following results in the console and will also generate a log file with the prefix `result_dataset_synthetic_1_` for each experiment with a specific level of training or testing anomalies.
+```
+Anomaly proportion in training: 1 percent; Mean AUROC in 10 runs: 0.83553
+Anomaly proportion in training: 5 percent; Mean AUROC in 10 runs: 0.82742
+Anomaly proportion in training: 10 percent; Mean AUROC in 10 runs: 0.8405000000000001
+Anomaly proportion in training: 15 percent; Mean AUROC in 10 runs: 0.8383900000000001
+Anomaly proportion in training: 20 percent; Mean AUROC in 10 runs: 0.82175
+Anomaly proportion in training: 25 percent; Mean AUROC in 10 runs: 0.8329699999999999
+Anomaly proportion in testing: 1 percent; Mean AUROC in 10 runs: 0.8828700000000002
+Anomaly proportion in testing: 5 percent; Mean AUROC in 10 runs: 0.86783
+Anomaly proportion in testing: 10 percent; Mean AUROC in 10 runs: 0.8449
+Anomaly proportion in testing: 15 percent; Mean AUROC in 10 runs: 0.8334700000000002
+Anomaly proportion in testing: 20 percent; Mean AUROC in 10 runs: 0.8156399999999999
+Anomaly proportion in testing: 25 percent; Mean AUROC in 10 runs: 0.8076800000000001
+```
 
 4. To replicate the results of our proposed model in [Table A10](results/tableA10.png) of the online supplemental materials, please do the following commands:
 ```
 cd scripts
 python run_synthetic_data_set_2.py
 ```
-The script is to run our proposed model on a synthetic data set which contains simulations of product diversion to unauthorized merchants. The experiment is expected to be completed in roughly one hour with a maximum cost of less than 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results and will also generate a log file that can be found in [results/result_dataset_synthetic_2.txt](results/result_dataset_synthetic_2.txt).
+The script is to run our proposed model on a synthetic data set which contains simulations of product diversion to unauthorized merchants. The experiment is expected to be completed in roughly one hour with a maximum cost of less than 5 GB GPU memory if ran with GPUs on a Linux server. The script will output the following results in the console and will also generate a log file that can be found in [results/result_dataset_synthetic_2.txt](results/result_dataset_synthetic_2.txt).
 ```
 Number of runs:  10 , Mean of AUROC:  0.98392 , Standard deviations of AUROC:  0.013270704578129976
 Number of runs:  10 , Mean of AUPRC:  0.83457 , Standard deviations of AUPRC:  0.0948944155364266
