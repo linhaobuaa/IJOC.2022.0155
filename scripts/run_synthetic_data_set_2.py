@@ -58,8 +58,6 @@ with open(result_filepath) as f:
             # print (linestr.split('AUPRC : ')[1])
             auprc_list.append(float(linestr.split('AUPRC : ')[1]))
 print('-'*50)
-auroc_list = auroc_list
 print ("Number of runs: ", len(auroc_list), ", Mean of AUROC: ", np.mean(auroc_list), ", Standard deviations of AUROC: ", np.std(auroc_list))
-auprc_list = auprc_list
 print ("Number of runs: ", len(auprc_list), ", Mean of AUPRC: ", np.mean(auprc_list), ", Standard deviations of AUPRC: ", np.std(auprc_list))
 print ("Finish computing average performance over multiple runs")
