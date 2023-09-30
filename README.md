@@ -46,7 +46,7 @@ To run the code, you will need to make sure that you have the following dependen
 
 ## Replicating
 
-1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md). Then, we recommend to use GPUs to run the codes in the `scripts` folder, and we detail the instructions as follows.
+1. Please firstly download and prepare the data sets according to the instructions in [data/README.md](data/README.md). Then, we recommend to use GPUs to run the codes in the folder [scripts](scripts), and we detail the instructions as follows.
 
 2. To replicate the results of our proposed model in [Table 1](results/table1.png) of the paper, please do the following commands:
 ```
@@ -65,7 +65,7 @@ Note: the results may show some stochasticity due to the random parameter initia
 cd scripts
 python run_synthetic_data_set_1.py
 ```
-The script is to run our proposed model on 12 synthetic data sets with different levels of training or testing anomalies. The experiment is expected to be completed in roughly 20 hours with a maximum cost of less than 5 GB memory if ran with GPUs on a Linux server. The script will output the following results in the console and will also generate a log file with the prefix `result_dataset_synthetic_1_` for each experiment with a specific level of training or testing anomalies.
+The script is to run our proposed model on 12 synthetic data sets with different levels of training or testing anomalies. The experiment is expected to be completed in roughly 20 hours with a maximum cost of less than 5 GB memory if ran with GPUs on a Linux server. The script will output the following results in the console and will also generate a log file under the folder [results](results) with the prefix `result_dataset_synthetic_1_` for each experiment with a specific level of training or testing anomalies.
 ```
 Anomaly proportion in training: 1 percent; Mean AUROC in 10 runs: 0.83553
 Anomaly proportion in training: 5 percent; Mean AUROC in 10 runs: 0.82742
